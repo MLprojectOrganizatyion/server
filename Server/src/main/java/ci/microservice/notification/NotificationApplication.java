@@ -12,8 +12,6 @@ import org.springframework.context.annotation.Configuration;
 @SpringBootApplication
 @Configuration
 public class NotificationApplication {
-    @Autowired
-    AdresseMailRepository adresseMailRepository;
 
     public static void main(String[] args) {
 

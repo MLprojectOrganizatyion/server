@@ -38,13 +38,22 @@ public class MachineLearningController {
         return adresseMailService.addModel(model);
     }
 
-    //@CrossOrigin
     @GetMapping("/predict")
     //@RabbitListener(queues = AmqpConfig.QUEUE_SEND_MODEL)
-    public Prediction getPrediction() {
-        //Object modelml = new Modelml();
-//        modelml = rabbitTemplate.receiveAndConvert(AmqpConfig.QUEUE_SEND_MODEL);
-//        System.out.print("Prediction"+ modelml);
-        return (Prediction) rabbitTemplate.receiveAndConvert(AmqpConfig.QUEUE_PREDICTION);
+    public Object getPrediction() {
+        Object prediction = rabbitTemplate.receiveAndConvert(AmqpConfig.QUEUE_PREDICTION);
+        // Prediction prediction= (Prediction) rabbitTemplate.receiveAndConvert(AmqpConfig.QUEUE_PREDICTION);
+        System.out.print("Prediction"+ prediction);
+        // return (Prediction) rabbitTemplate.receiveAndConvert(AmqpConfig.QUEUE_PREDICTION);
+        return prediction;
     }
+
+//    @GetMapping("/predict")
+//    //@RabbitListener(queues = AmqpConfig.QUEUE_SEND_MODEL)
+//    public Prediction getPrediction() {
+//        Prediction prediction= (Prediction) rabbitTemplate.receiveAndConvert(AmqpConfig.QUEUE_PREDICTION);
+//        System.out.print("Prediction"+ prediction);
+//       // return (Prediction) rabbitTemplate.receiveAndConvert(AmqpConfig.QUEUE_PREDICTION);
+//        return prediction;
+//    }
 }
