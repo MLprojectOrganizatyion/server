@@ -1,17 +1,13 @@
-package ci.microservice.notification.adresseMail.controller;
+package ci.microservice.notification.machineLearning.controller;
 
-import ci.microservice.notification.adresseMail.models.Modelml;
-import ci.microservice.notification.adresseMail.services.AdresseMailService;
+import ci.microservice.notification.machineLearning.models.Modelml;
+import ci.microservice.notification.machineLearning.services.AdresseMailService;
 import ci.microservice.notification.amqp.AmqpConfig;
 import ci.microservice.notification.amqp.Prediction;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 //@Service
 @Slf4j

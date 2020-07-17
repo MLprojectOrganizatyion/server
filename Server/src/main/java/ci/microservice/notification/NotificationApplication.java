@@ -1,6 +1,6 @@
 package ci.microservice.notification;
 
-import ci.microservice.notification.adresseMail.dao.AdresseMailRepository;
+import ci.microservice.notification.machineLearning.dao.AdresseMailRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;

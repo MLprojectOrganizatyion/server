@@ -1,9 +1,7 @@
-package ci.microservice.notification.adresseMail.services;
+package ci.microservice.notification.machineLearning.services;
 
-import ci.microservice.notification.adresseMail.models.Modelml;
+import ci.microservice.notification.machineLearning.models.Modelml;
 import ci.microservice.notification.amqp.Prediction;
-
-import java.util.List;
 
 
 public interface AdresseMailService {

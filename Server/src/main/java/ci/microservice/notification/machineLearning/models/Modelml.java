@@ -1,10 +1,8 @@
-package ci.microservice.notification.adresseMail.models;
+package ci.microservice.notification.machineLearning.models;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
 @NoArgsConstructor
