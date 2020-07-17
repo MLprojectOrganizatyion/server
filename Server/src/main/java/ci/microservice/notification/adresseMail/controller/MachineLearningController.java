@@ -18,13 +18,13 @@ import java.util.List;
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/ml")
-public class adresseMailController {
+public class MachineLearningController {
 
     @Autowired
     AdresseMailService adresseMailService;
     private final RabbitTemplate rabbitTemplate;
 
-    public adresseMailController(RabbitTemplate rabbitTemplate) {
+    public MachineLearningController(RabbitTemplate rabbitTemplate) {
         this.rabbitTemplate = rabbitTemplate;
     }
     @CrossOrigin(origins="http://localhost:4200")
